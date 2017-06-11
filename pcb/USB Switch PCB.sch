@@ -5126,6 +5126,16 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="0" y1="0" x2="0" y2="-12.99" width="0.127" layer="21"/>
 <text x="-6.35" y="3.81" size="1.27" layer="25">&gt;Name</text>
 </package>
+<package name="SWITCH">
+<pad name="O" x="0" y="0" drill="0.6"/>
+<pad name="P" x="2.54" y="0" drill="0.6"/>
+<pad name="S" x="5.08" y="0" drill="0.6"/>
+<wire x1="-1.397" y1="2.032" x2="6.477" y2="2.032" width="0.127" layer="21" style="shortdash"/>
+<wire x1="-1.397" y1="-2.032" x2="6.477" y2="-2.032" width="0.127" layer="21" style="shortdash"/>
+<wire x1="-1.397" y1="2.032" x2="-1.397" y2="-2.032" width="0.127" layer="21" style="shortdash"/>
+<wire x1="6.477" y1="-2.032" x2="6.477" y2="2.032" width="0.127" layer="21" style="shortdash"/>
+<text x="-1.27" y="2.54" size="1.27" layer="25">&gt;Name</text>
+</package>
 </packages>
 <symbols>
 <symbol name="NONLATCH">
@@ -5237,6 +5247,17 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <text x="-2.54" y="10.668" size="1.27" layer="95">&gt;Name</text>
 </symbol>
+<symbol name="SWITCH">
+<wire x1="0" y1="-3.175" x2="0" y2="3.302" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="3.175" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="3.175" width="0.254" layer="94"/>
+<text x="5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="EC2-5NU" prefix="U">
@@ -5319,6 +5340,23 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH" prefix="S">
+<gates>
+<gate name="G$1" symbol="SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SWITCH">
+<connects>
+<connect gate="G$1" pin="O" pad="O"/>
+<connect gate="G$1" pin="P" pad="P"/>
+<connect gate="G$1" pin="S" pad="S"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5430,6 +5468,7 @@ General-purpose diode for high-speed switching</description>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="X1" library="USB Switch PCB" deviceset="UE27-USBA" device=""/>
+<part name="S1" library="USB Switch PCB" deviceset="SWITCH" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5459,6 +5498,7 @@ General-purpose diode for high-speed switching</description>
 <instance part="P+3" gate="1" x="-50.8" y="22.86" rot="R90"/>
 <instance part="GND2" gate="1" x="-53.34" y="17.78"/>
 <instance part="X1" gate="G$1" x="-27.94" y="66.04"/>
+<instance part="S1" gate="G$1" x="17.78" y="76.2"/>
 </instances>
 <busses>
 </busses>
