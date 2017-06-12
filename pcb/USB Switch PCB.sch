@@ -5136,6 +5136,22 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="6.477" y1="-2.032" x2="6.477" y2="2.032" width="0.127" layer="21" style="shortdash"/>
 <text x="-1.27" y="2.54" size="1.27" layer="25">&gt;Name</text>
 </package>
+<package name="10118194-0001LF">
+<smd name="VCC" x="-1.3" y="2.7" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="D-" x="-0.65" y="2.7" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="D+" x="0" y="2.7" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="ID" x="0.65" y="2.7" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<smd name="GND" x="1.3" y="2.7" dx="0.4" dy="1.35" layer="1" rot="R180"/>
+<hole x="2.5" y="2.7" drill="0.85"/>
+<hole x="-2.5" y="2.7" drill="0.85"/>
+<pad name="P$6" x="-2.5" y="2.7" drill="0.85"/>
+<pad name="P$7" x="2.5" y="2.7" drill="0.85"/>
+<hole x="3.6" y="0" drill="1.15"/>
+<hole x="-3.6" y="0" drill="1.15"/>
+<pad name="P$8" x="-3.6" y="0" drill="1.15"/>
+<pad name="P$9" x="3.6" y="0" drill="1.15"/>
+<text x="-3.81" y="4.318" size="1.27" layer="25">&gt;Name</text>
+</package>
 </packages>
 <symbols>
 <symbol name="NONLATCH">
@@ -5258,6 +5274,17 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
 <pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
 </symbol>
+<symbol name="MICROUSB">
+<pin name="VCC" x="2.54" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="D-" x="2.54" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="D+" x="2.54" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="ID" x="2.54" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="GND" x="2.54" y="10.16" visible="pin" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="12.7" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="12.7" x2="0" y2="12.7" width="0.254" layer="94"/>
+<text x="-2.54" y="13.208" size="1.27" layer="95">&gt;Name</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="EC2-5NU" prefix="U">
@@ -5357,6 +5384,25 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <connect gate="G$1" pin="O" pad="O"/>
 <connect gate="G$1" pin="P" pad="P"/>
 <connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HLP511-USBMICROB" prefix="X">
+<gates>
+<gate name="G$1" symbol="MICROUSB" x="0" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="10118194-0001LF">
+<connects>
+<connect gate="G$1" pin="D+" pad="D+"/>
+<connect gate="G$1" pin="D-" pad="D-"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="ID" pad="ID"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5469,6 +5515,8 @@ General-purpose diode for high-speed switching</description>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="X1" library="USB Switch PCB" deviceset="UE27-USBA" device=""/>
 <part name="S1" library="USB Switch PCB" deviceset="SWITCH" device=""/>
+<part name="X2" library="USB Switch PCB" deviceset="HLP511-USBMICROB" device=""/>
+<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5499,6 +5547,8 @@ General-purpose diode for high-speed switching</description>
 <instance part="GND2" gate="1" x="-53.34" y="17.78"/>
 <instance part="X1" gate="G$1" x="-27.94" y="66.04"/>
 <instance part="S1" gate="G$1" x="17.78" y="76.2"/>
+<instance part="X2" gate="G$1" x="-27.94" y="83.82"/>
+<instance part="P+4" gate="1" x="15.24" y="83.82"/>
 </instances>
 <busses>
 </busses>
@@ -5559,6 +5609,10 @@ General-purpose diode for high-speed switching</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="5V"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="S1" gate="G$1" pin="O"/>
+<pinref part="P+4" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -5659,6 +5713,59 @@ General-purpose diode for high-speed switching</description>
 <wire x1="-7.62" y1="35.56" x2="2.54" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="A2"/>
 <wire x1="2.54" y1="35.56" x2="2.54" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="X2" gate="G$1" pin="GND"/>
+<wire x1="-25.4" y1="93.98" x2="5.08" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="93.98" x2="5.08" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="C2"/>
+<wire x1="5.08" y1="63.5" x2="2.54" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="X2" gate="G$1" pin="D+"/>
+<wire x1="-25.4" y1="88.9" x2="27.94" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="88.9" x2="27.94" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="33.02" x2="5.08" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="33.02" x2="5.08" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="C2"/>
+<wire x1="5.08" y1="27.94" x2="2.54" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="C1"/>
+<wire x1="-12.7" y1="27.94" x2="-17.78" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="27.94" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="50.8" x2="-20.32" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="50.8" x2="-20.32" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="D-"/>
+<wire x1="-20.32" y1="86.36" x2="-25.4" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="S1" gate="G$1" pin="P"/>
+<pinref part="U$1" gate="G$1" pin="C1"/>
+<wire x1="-12.7" y1="63.5" x2="-15.24" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="63.5" x2="-15.24" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="76.2" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="76.2" x2="7.62" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="66.04" x2="17.78" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="66.04" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="X2" gate="G$1" pin="VCC"/>
+<wire x1="-25.4" y1="83.82" x2="7.62" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="83.82" x2="7.62" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="S"/>
+<wire x1="7.62" y1="86.36" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="86.36" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
