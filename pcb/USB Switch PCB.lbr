@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.2" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -120,7 +120,11 @@
 <pad name="D7" x="22.86" y="5.08" drill="0.6"/>
 <pad name="D8" x="22.86" y="2.54" drill="0.6"/>
 <pad name="3V3" x="22.86" y="0" drill="0.6"/>
-<text x="0" y="25.4" size="1.27" layer="25">&gt;Name</text>
+<text x="-1.2" y="25.8" size="1.27" layer="25">&gt;Name</text>
+<wire x1="-1.27" y1="-8.89" x2="24.13" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-8.89" x2="-1.27" y2="25.31" width="0.127" layer="21"/>
+<wire x1="24.13" y1="-8.89" x2="24.13" y2="25.31" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="25.31" x2="24.13" y2="25.31" width="0.127" layer="21"/>
 </package>
 <package name="UE27-USBA">
 <pad name="P$1" x="6.57" y="-2.71" drill="2.3"/>
@@ -129,7 +133,7 @@
 <pad name="D-" x="-1" y="0" drill="0.9"/>
 <pad name="VCC" x="-3.5" y="0" drill="0.9"/>
 <pad name="GND" x="3.5" y="0" drill="0.9"/>
-<text x="-6.35" y="3.81" size="1.27" layer="25">&gt;Name</text>
+<text x="-6.35" y="1.651" size="1.27" layer="25">&gt;Name</text>
 <wire x1="-6.55" y1="0.86" x2="6.55" y2="0.86" width="0.127" layer="21"/>
 <wire x1="-6.55" y1="-13" x2="6.55" y2="-13" width="0.127" layer="21"/>
 <wire x1="-6.55" y1="-13" x2="-6.55" y2="0.86" width="0.127" layer="21"/>

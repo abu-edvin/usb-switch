@@ -5086,7 +5086,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pad name="D7" x="22.86" y="5.08" drill="0.6"/>
 <pad name="D8" x="22.86" y="2.54" drill="0.6"/>
 <pad name="3V3" x="22.86" y="0" drill="0.6"/>
-<text x="0" y="25.4" size="1.27" layer="25">&gt;Name</text>
+<text x="-1.2" y="25.8" size="1.27" layer="25">&gt;Name</text>
+<wire x1="-1.27" y1="-8.89" x2="24.13" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-8.89" x2="-1.27" y2="25.31" width="0.127" layer="21"/>
+<wire x1="24.13" y1="-8.89" x2="24.13" y2="25.31" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="25.31" x2="24.13" y2="25.31" width="0.127" layer="21"/>
 </package>
 <package name="SWITCH">
 <pad name="O" x="0" y="0" drill="0.6"/>
@@ -5123,7 +5127,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pad name="D-" x="-1" y="0" drill="0.9"/>
 <pad name="VCC" x="-3.5" y="0" drill="0.9"/>
 <pad name="GND" x="3.5" y="0" drill="0.9"/>
-<text x="-6.35" y="3.81" size="1.27" layer="25">&gt;Name</text>
+<text x="-6.35" y="1.651" size="1.27" layer="25">&gt;Name</text>
 <wire x1="-6.55" y1="0.86" x2="6.55" y2="0.86" width="0.127" layer="21"/>
 <wire x1="-6.55" y1="-13" x2="6.55" y2="-13" width="0.127" layer="21"/>
 <wire x1="-6.55" y1="-13" x2="-6.55" y2="0.86" width="0.127" layer="21"/>
