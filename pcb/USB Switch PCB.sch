@@ -5686,6 +5686,7 @@ General-purpose diode for high-speed switching</description>
 <part name="X2" library="USB Switch PCB" deviceset="UE27-USBA" device=""/>
 <part name="UIN" library="USB Switch PCB" deviceset="FE05-1" device=""/>
 <part name="UOUT" library="USB Switch PCB" deviceset="FE04-1" device=""/>
+<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5721,6 +5722,7 @@ General-purpose diode for high-speed switching</description>
 <instance part="X2" gate="G$1" x="-30.48" y="66.04"/>
 <instance part="UIN" gate="G$1" x="-53.34" y="88.9"/>
 <instance part="UOUT" gate="G$1" x="-48.26" y="71.12"/>
+<instance part="P+4" gate="1" x="-55.88" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -5791,6 +5793,16 @@ General-purpose diode for high-speed switching</description>
 <wire x1="-7.62" y1="50.8" x2="-12.7" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="50.8" x2="-12.7" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-12.7" y="55.88"/>
+</segment>
+<segment>
+<pinref part="S1" gate="G$1" pin="S"/>
+<wire x1="-40.64" y1="53.34" x2="-40.64" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="5V"/>
+<wire x1="-55.88" y1="22.86" x2="-48.26" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="50.8" x2="-55.88" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="50.8" x2="-55.88" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="P+4" gate="1" pin="+5V"/>
+<junction x="-55.88" y="50.8"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5929,16 +5941,6 @@ General-purpose diode for high-speed switching</description>
 <pinref part="UIN" gate="G$1" pin="4"/>
 <pinref part="X1" gate="G$1" pin="ID"/>
 <wire x1="-45.72" y1="91.44" x2="-35.56" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="5VESP" class="0">
-<segment>
-<pinref part="S1" gate="G$1" pin="S"/>
-<wire x1="-40.64" y1="53.34" x2="-40.64" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="5V"/>
-<wire x1="-55.88" y1="22.86" x2="-48.26" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="50.8" x2="-55.88" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="50.8" x2="-55.88" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DATAON" class="0">

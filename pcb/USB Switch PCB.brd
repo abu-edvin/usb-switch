@@ -1734,6 +1734,7 @@ design rules under a new name.</description>
 <via x="17.145" y="29.718" extent="1-16" drill="0.35"/>
 <via x="17.907" y="20.828" extent="1-16" drill="0.35"/>
 <via x="7.493" y="35.052" extent="1-16" drill="0.35"/>
+<wire x1="9.535" y1="1.27" x2="10.235" y2="3.82" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
 <contactref element="LED2" pad="A"/>
@@ -1767,6 +1768,15 @@ design rules under a new name.</description>
 <wire x1="25.9334" y1="6.12214375" x2="25.45005625" y2="5.6388" width="0.1524" layer="1"/>
 <wire x1="23.1988" y1="5.6388" x2="20.32" y2="2.76" width="0.1524" layer="1"/>
 <wire x1="25.45005625" y1="5.6388" x2="23.1988" y2="5.6388" width="0.1524" layer="1"/>
+<contactref element="S1" pad="S"/>
+<contactref element="U1" pad="5V"/>
+<wire x1="2.6162" y1="19.05" x2="1.905" y2="19.05" width="0.1524" layer="16"/>
+<wire x1="5.8166" y1="22.2504" x2="2.6162" y2="19.05" width="0.1524" layer="16"/>
+<wire x1="5.8166" y1="51.054" x2="5.8166" y2="22.2504" width="0.1524" layer="16"/>
+<wire x1="10.6934" y1="55.9308" x2="5.8166" y2="51.054" width="0.1524" layer="16"/>
+<wire x1="10.6934" y1="57.15" x2="10.6934" y2="55.9308" width="0.1524" layer="16"/>
+<wire x1="10.6934" y1="57.15" x2="10.795" y2="57.15" width="0.1524" layer="16"/>
+<wire x1="12.065" y1="58.3692" x2="10.795" y2="57.15" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="2"/>
@@ -1793,14 +1803,19 @@ design rules under a new name.</description>
 <signal name="PWRON">
 <contactref element="U1" pad="D1"/>
 <contactref element="R3" pad="1"/>
-<wire x1="2.0066" y1="7.1628" x2="2.0066" y2="6.858" width="0.1524" layer="1"/>
+<wire x1="2.0066" y1="6.858" x2="2.0066" y2="7.1628" width="0.1524" layer="1"/>
 <wire x1="3.5306" y1="8.6868" x2="2.0066" y2="7.1628" width="0.1524" layer="1"/>
-<wire x1="3.5306" y1="20.8788" x2="3.5306" y2="8.6868" width="0.1524" layer="1"/>
-<wire x1="3.5306" y1="30.1752" x2="3.5306" y2="20.8788" width="0.1524" layer="16"/>
-<wire x1="2.0066" y1="31.6992" x2="3.5306" y2="30.1752" width="0.1524" layer="16"/>
-<wire x1="2.0066" y1="6.858" x2="1.905" y2="6.77" width="0.1524" layer="1"/>
+<wire x1="1.905" y1="6.77" x2="2.0066" y2="6.858" width="0.1524" layer="1"/>
 <wire x1="2.0066" y1="31.6992" x2="1.905" y2="31.75" width="0.1524" layer="16"/>
-<via x="3.5306" y="20.8788" extent="1-16" drill="0.35"/>
+<via x="4.1656" y="22.7838" extent="1-16" drill="0.35"/>
+<wire x1="1.2563125" y1="22.3726" x2="1.1224" y2="22.2386875" width="0.1524" layer="1"/>
+<wire x1="1.1224" y1="22.2386875" x2="1.1224" y2="20.9413125" width="0.1524" layer="1"/>
+<wire x1="3.7544" y1="22.3726" x2="4.1656" y2="22.7838" width="0.1524" layer="1"/>
+<wire x1="3.7544" y1="22.3726" x2="1.2563125" y2="22.3726" width="0.1524" layer="1"/>
+<wire x1="1.1224" y1="20.9413125" x2="3.5306" y2="18.5331125" width="0.1524" layer="1"/>
+<wire x1="3.5306" y1="18.5331125" x2="3.5306" y2="8.6868" width="0.1524" layer="1"/>
+<wire x1="4.1656" y1="29.5402" x2="4.1656" y2="22.7838" width="0.1524" layer="16"/>
+<wire x1="4.1656" y1="29.5402" x2="2.0066" y2="31.6992" width="0.1524" layer="16"/>
 </signal>
 <signal name="N$3">
 <contactref element="Q1" pad="1"/>
@@ -1959,16 +1974,6 @@ design rules under a new name.</description>
 <wire x1="14.0462" y1="5.7912" x2="14.0462" y2="3.9624" width="0.1524" layer="1"/>
 <wire x1="15.875" y1="7.62" x2="14.0462" y2="5.7912" width="0.1524" layer="1"/>
 <wire x1="14.0462" y1="3.9624" x2="13.985" y2="3.95" width="0.1524" layer="1"/>
-</signal>
-<signal name="5VESP">
-<contactref element="S1" pad="S"/>
-<contactref element="U1" pad="5V"/>
-<wire x1="2.6162" y1="19.05" x2="1.905" y2="19.05" width="0.1524" layer="16"/>
-<wire x1="5.8166" y1="22.2504" x2="2.6162" y2="19.05" width="0.1524" layer="16"/>
-<wire x1="5.8166" y1="51.054" x2="5.8166" y2="22.2504" width="0.1524" layer="16"/>
-<wire x1="10.6934" y1="55.9308" x2="5.8166" y2="51.054" width="0.1524" layer="16"/>
-<wire x1="10.6934" y1="57.15" x2="10.6934" y2="55.9308" width="0.1524" layer="16"/>
-<wire x1="10.6934" y1="57.15" x2="10.795" y2="57.15" width="0.1524" layer="16"/>
 </signal>
 <signal name="DATAON">
 <contactref element="U1" pad="D2"/>
