@@ -3,19 +3,73 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 
-const char* ssid = "Proxyon";
-const char* password = "typewriter";
+// TODO:
+// Implement some kind of IP broadcast.
+// Add OLED?
+
+// Delay between individual blinks in patterns.
+#define BLINK_DELAY 100
+// Default delay between power and data pin relays.
+#define DATA_DELAY 10
+// GPIO pin for power relay.
+#define PIN_POWER 5
+// GPIO pin for data relay.
+#define PIN_DATA 4
+// Random +/- offset max for power-data relay delays for simulating different cable insertion speed.
+#define JITTER_DELAY 8
+// Default number of seconds for simulate command, when no number is specified.
+#define SIMULATE_SECONDS 5
+
+static const char* ssid = "Proxyon";
+static const char* password = "typewriter";
+const struct {
+  byte init;
+  byte wlan;
+  byte on;
+  byte off;
+} patterns = { B11110000, B10110010, B10110111, B11101101 };
 
 ESP8266WebServer server(80);
 
 void handleOn() {
-  digitalWrite(LED_BUILTIN, LOW);
-  Serial.print("1");
+  digitalWrite(PIN_POWER, HIGH);
+  delay(DATA_DELAY + random(JITTER_DELAY));
+  digitalWrite(PIN_DATA, HIGH);    
+  writePattern(patterns.on);
+  setLed(true);
+  Serial.println("1");
 }
 
 void handleOff() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  Serial.print("0");
+  digitalWrite(PIN_DATA, LOW);
+  delay(DATA_DELAY + random(JITTER_DELAY));
+  digitalWrite(PIN_POWER, LOW);
+  writePattern(patterns.off);
+  setLed(false);
+  Serial.println("0");
+}
+
+void handleSimulate() {
+  uint16_t seconds = server.hasArg("seconds") ? (uint16_t)server.arg("seconds").toInt() : SIMULATE_SECONDS;
+  uint16_t jitterDelay = server.hasArg("jitterDelay") ? (uint16_t)server.arg("jitterDelay").toInt() : JITTER_DELAY;
+  Serial.println("simulating");
+  handleOn();
+  delay(seconds + random(1000));
+  handleOff();
+  Serial.println("s");
+}
+
+void setLed(bool lit) {
+  digitalWrite(LED_BUILTIN, lit ? LOW : HIGH);
+}
+
+void writePattern(byte pattern) {
+  for (byte i = 0; i < 8; i++) {
+    byte bit = pattern & 1;
+    setLed((bool)bit);   
+    pattern >>= 1;
+    delay(BLINK_DELAY);
+  }
 }
 
 void handleNotFound(){  
@@ -35,16 +89,19 @@ void handleNotFound(){
 
 void setup(void){
   pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH);
+  pinMode(PIN_POWER, OUTPUT);
+  pinMode(PIN_DATA, OUTPUT);
+  writePattern(patterns.init);
   Serial.begin(115200);
   WiFi.begin(ssid, password);
-  Serial.println("");
+  Serial.println("Initializing WLAN");
 
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    writePattern(patterns.wlan);
     Serial.print(".");
   }
+  setLed(false);
   Serial.println("");
   Serial.print("Connected to ");
   Serial.println(ssid);
@@ -63,6 +120,11 @@ void setup(void){
     server.send(200, "text/plain", "off");
   });
 
+  server.on("/simulate", [](){
+    server.send(200, "text/plain", "simulate");
+    handleSimulate();
+  });
+
   server.onNotFound(handleNotFound);
 
   server.begin();
@@ -77,6 +139,9 @@ void loop(void){
     break;
   case '0':
     handleOff();
-    break;    
+    break;
+  case 's':
+    handleSimulate();
+    break;  
   }
 }
