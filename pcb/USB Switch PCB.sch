@@ -7393,6 +7393,12 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="+3V3" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND" library_version="1">
@@ -7412,6 +7418,19 @@ Source: AVX .. aphvc.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+5V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+3V3" prefix="+3V3" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="+3V3" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -9319,7 +9338,6 @@ Source: http://www.cypress.com .. 38-12025_0P_V.pdf</description>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" value="10µF"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device="" value="+3.3V"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device="" value="+3.3V"/>
@@ -9336,7 +9354,6 @@ Source: http://www.cypress.com .. 38-12025_0P_V.pdf</description>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$5" library="USB Switch PCB" deviceset="MIC5504-3.3YM5" device="SOT23"/>
-<part name="3V5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device="" value="+3.3V"/>
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" value="1µF"/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9346,6 +9363,14 @@ Source: http://www.cypress.com .. 38-12025_0P_V.pdf</description>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="12kΩ"/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="D3" library="USB Switch PCB" deviceset="BAS40" device="" value="BAS21LT1"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="12kΩ"/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="12kΩ"/>
+<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="12kΩ"/>
+<part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="100Ω"/>
+<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="100Ω"/>
 </parts>
 <sheets>
 <sheet>
@@ -9372,9 +9397,9 @@ Add weird UMH3N circuit</text>
 <wire x1="27.94" y1="91.44" x2="27.94" y2="132.08" width="0.1524" layer="97"/>
 <text x="29.21" y="133.35" size="2.54" layer="97">Power Management</text>
 <wire x1="-48.26" y1="55.88" x2="93.98" y2="55.88" width="0.1524" layer="97"/>
-<wire x1="93.98" y1="55.88" x2="93.98" y2="-38.1" width="0.1524" layer="97"/>
-<wire x1="93.98" y1="-38.1" x2="-48.26" y2="-38.1" width="0.1524" layer="97"/>
-<wire x1="-48.26" y1="-38.1" x2="-48.26" y2="55.88" width="0.1524" layer="97"/>
+<wire x1="93.98" y1="55.88" x2="93.98" y2="-63.5" width="0.1524" layer="97"/>
+<wire x1="93.98" y1="-63.5" x2="-48.26" y2="-63.5" width="0.1524" layer="97"/>
+<wire x1="-48.26" y1="-63.5" x2="-48.26" y2="55.88" width="0.1524" layer="97"/>
 <text x="-46.99" y="57.15" size="2.54" layer="97">ESP12E</text>
 <wire x1="-109.22" y1="25.4" x2="-71.12" y2="25.4" width="0.1524" layer="97"/>
 <wire x1="-71.12" y1="25.4" x2="-71.12" y2="-27.94" width="0.1524" layer="97"/>
@@ -9412,20 +9437,19 @@ Add weird UMH3N circuit</text>
 <instance part="EXTPWR" gate="G$1" x="-110.49" y="119.38"/>
 <instance part="GND7" gate="1" x="-99.822" y="124.46" rot="R180"/>
 <instance part="P+7" gate="1" x="-99.822" y="116.84" rot="R180"/>
-<instance part="MCU" gate="G$1" x="5.08" y="-2.54"/>
+<instance part="MCU" gate="G$1" x="0" y="-2.54"/>
 <instance part="U$3" gate="G$1" x="-2.54" y="35.56"/>
 <instance part="GND8" gate="1" x="-15.24" y="48.26" rot="R180"/>
 <instance part="R5" gate="G$1" x="-30.48" y="45.72"/>
 <instance part="R6" gate="G$1" x="-30.48" y="38.1"/>
-<instance part="3V3" gate="1" x="-30.48" y="-10.16"/>
-<instance part="C1" gate="G$1" x="-22.86" y="-15.24"/>
-<instance part="C2" gate="G$1" x="-30.48" y="-15.24"/>
-<instance part="GND9" gate="1" x="-30.48" y="-22.86"/>
-<instance part="GND10" gate="1" x="-22.86" y="-22.86"/>
-<instance part="GND11" gate="1" x="15.24" y="-15.24"/>
+<instance part="3V3" gate="1" x="-35.56" y="-10.16"/>
+<instance part="C1" gate="G$1" x="-27.94" y="-15.24"/>
+<instance part="C2" gate="G$1" x="-35.56" y="-15.24"/>
+<instance part="GND9" gate="1" x="-35.56" y="-22.86"/>
+<instance part="GND10" gate="1" x="-27.94" y="-22.86"/>
+<instance part="GND11" gate="1" x="10.16" y="-15.24"/>
 <instance part="C3" gate="G$1" x="22.86" y="43.18"/>
 <instance part="C4" gate="G$1" x="33.02" y="43.18"/>
-<instance part="3V1" gate="1" x="33.02" y="50.8"/>
 <instance part="GND12" gate="1" x="33.02" y="35.56"/>
 <instance part="GND13" gate="1" x="22.86" y="35.56"/>
 <instance part="3V2" gate="1" x="-20.32" y="48.26"/>
@@ -9437,21 +9461,28 @@ Add weird UMH3N circuit</text>
 <instance part="C6" gate="G$1" x="71.12" y="17.78"/>
 <instance part="GND2" gate="1" x="53.34" y="10.16"/>
 <instance part="GND15" gate="1" x="71.12" y="10.16"/>
-<instance part="3V4" gate="1" x="53.34" y="-2.54"/>
-<instance part="R3" gate="G$1" x="58.42" y="-20.32"/>
-<instance part="C7" gate="G$1" x="66.04" y="-22.86"/>
-<instance part="GND16" gate="1" x="66.04" y="-30.48"/>
+<instance part="3V4" gate="1" x="60.96" y="0"/>
+<instance part="R3" gate="G$1" x="66.04" y="-30.48"/>
+<instance part="C7" gate="G$1" x="73.66" y="-33.02"/>
+<instance part="GND16" gate="1" x="73.66" y="-40.64"/>
 <instance part="U$5" gate="G$1" x="50.8" y="111.76"/>
-<instance part="3V5" gate="1" x="71.12" y="124.46"/>
 <instance part="C8" gate="G$1" x="71.12" y="116.84"/>
 <instance part="GND17" gate="1" x="53.34" y="99.06"/>
 <instance part="GND18" gate="1" x="71.12" y="109.22"/>
 <instance part="C9" gate="G$1" x="35.56" y="109.22"/>
 <instance part="GND19" gate="1" x="35.56" y="101.6"/>
 <instance part="P+8" gate="1" x="35.56" y="121.92"/>
-<instance part="R4" gate="G$1" x="58.42" y="-12.7"/>
+<instance part="R4" gate="G$1" x="66.04" y="-22.86"/>
 <instance part="P+9" gate="1" x="-68.58" y="66.04"/>
 <instance part="D3" gate="1" x="-68.58" y="58.42" rot="R90"/>
+<instance part="R7" gate="G$1" x="66.04" y="-15.24"/>
+<instance part="R8" gate="G$1" x="66.04" y="-7.62"/>
+<instance part="R9" gate="G$1" x="66.04" y="-48.26"/>
+<instance part="GND20" gate="1" x="60.96" y="-55.88"/>
+<instance part="+3V1" gate="G$1" x="33.02" y="50.8"/>
+<instance part="+3V2" gate="G$1" x="71.12" y="124.46"/>
+<instance part="R10" gate="G$1" x="27.94" y="2.54"/>
+<instance part="R11" gate="G$1" x="27.94" y="-5.08"/>
 </instances>
 <busses>
 </busses>
@@ -9546,6 +9577,11 @@ Add weird UMH3N circuit</text>
 <pinref part="C9" gate="G$1" pin="2"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="GND20" gate="1" pin="GND"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="-53.34" x2="60.96" y2="-48.26" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -9589,12 +9625,12 @@ Add weird UMH3N circuit</text>
 <segment>
 <pinref part="MCU" gate="G$1" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-17.78" y1="-12.7" x2="-22.86" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-12.7" x2="-27.94" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="-12.7" x2="-30.48" y2="-12.7" width="0.1524" layer="91"/>
-<junction x="-22.86" y="-12.7"/>
+<wire x1="-27.94" y1="-12.7" x2="-35.56" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-27.94" y="-12.7"/>
 <pinref part="3V3" gate="1" pin="+5V"/>
-<junction x="-30.48" y="-12.7"/>
+<junction x="-35.56" y="-12.7"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="V3"/>
@@ -9605,10 +9641,16 @@ Add weird UMH3N circuit</text>
 <segment>
 <pinref part="3V4" gate="1" pin="+5V"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="-5.08" x2="53.34" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="-2.54" x2="60.96" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="-12.7" x2="53.34" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="53.34" y="-12.7"/>
+<wire x1="60.96" y1="-7.62" x2="60.96" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="-15.24" x2="60.96" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="-22.86" x2="60.96" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="60.96" y="-22.86"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<junction x="60.96" y="-15.24"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<junction x="60.96" y="-7.62"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="VIN"/>
@@ -9640,7 +9682,7 @@ Add weird UMH3N circuit</text>
 <pinref part="D1" gate="1" pin="A"/>
 <wire x1="-30.48" y1="76.2" x2="-25.4" y2="76.2" width="0.1524" layer="91"/>
 <label x="-25.4" y="83.82" size="1.778" layer="95"/>
-<wire x1="-25.4" y1="83.82" x2="-10.16" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="83.82" x2="-12.7" y2="83.82" width="0.1524" layer="91"/>
 <junction x="-25.4" y="83.82"/>
 </segment>
 <segment>
@@ -9656,9 +9698,9 @@ Add weird UMH3N circuit</text>
 <label x="-2.54" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU" gate="G$1" pin="GPIO5"/>
-<wire x1="15.24" y1="0" x2="17.78" y2="0" width="0.1524" layer="91"/>
-<label x="17.78" y="0" size="1.778" layer="95"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<label x="33.02" y="-5.08" size="1.778" layer="95"/>
+<wire x1="33.02" y1="-5.08" x2="48.26" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCCO" class="0">
@@ -9666,7 +9708,6 @@ Add weird UMH3N circuit</text>
 <pinref part="X2" gate="G$1" pin="VCC"/>
 <wire x1="-104.14" y1="76.2" x2="-91.44" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="UOUT" gate="G$1" pin="1"/>
-<label x="-45.72" y="93.98" size="1.778" layer="95"/>
 <wire x1="-91.44" y1="76.2" x2="-83.82" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-91.44" y="76.2"/>
 <label x="-91.44" y="76.2" size="1.778" layer="95"/>
@@ -9674,6 +9715,7 @@ Add weird UMH3N circuit</text>
 <segment>
 <pinref part="U$1" gate="G$1" pin="A1"/>
 <wire x1="-40.64" y1="93.98" x2="-45.72" y2="93.98" width="0.1524" layer="91"/>
+<label x="-45.72" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GNDO" class="0">
@@ -9785,7 +9827,7 @@ Add weird UMH3N circuit</text>
 <pinref part="D2" gate="1" pin="A"/>
 <wire x1="-30.48" y1="104.14" x2="-25.4" y2="104.14" width="0.1524" layer="91"/>
 <label x="-25.4" y="111.76" size="1.778" layer="95"/>
-<wire x1="-25.4" y1="111.76" x2="-15.24" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="111.76" x2="-12.7" y2="111.76" width="0.1524" layer="91"/>
 <junction x="-25.4" y="111.76"/>
 </segment>
 <segment>
@@ -9808,8 +9850,8 @@ Add weird UMH3N circuit</text>
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="TXD"/>
-<wire x1="15.24" y1="5.08" x2="17.78" y2="5.08" width="0.1524" layer="91"/>
-<label x="17.78" y="5.08" size="1.778" layer="95"/>
+<wire x1="10.16" y1="5.08" x2="12.7" y2="5.08" width="0.1524" layer="91"/>
+<label x="12.7" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -9836,8 +9878,8 @@ Add weird UMH3N circuit</text>
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="RXD"/>
-<wire x1="15.24" y1="2.54" x2="17.78" y2="2.54" width="0.1524" layer="91"/>
-<label x="17.78" y="2.54" size="1.778" layer="95"/>
+<wire x1="10.16" y1="2.54" x2="12.7" y2="2.54" width="0.1524" layer="91"/>
+<label x="12.7" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D-ESP" class="0">
@@ -9871,16 +9913,16 @@ Add weird UMH3N circuit</text>
 <label x="-5.08" y="86.36" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU" gate="G$1" pin="GPIO4"/>
-<wire x1="15.24" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
-<label x="17.78" y="-2.54" size="1.778" layer="95"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<label x="33.02" y="2.54" size="1.778" layer="95"/>
+<wire x1="33.02" y1="2.54" x2="48.26" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RST" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="REST"/>
-<wire x1="-17.78" y1="5.08" x2="-22.86" y2="5.08" width="0.1524" layer="91"/>
-<label x="-22.86" y="5.08" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="5.08" x2="-27.94" y2="5.08" width="0.1524" layer="91"/>
+<label x="-27.94" y="5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="CA"/>
@@ -9890,10 +9932,10 @@ Add weird UMH3N circuit</text>
 <segment>
 <pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="-20.32" x2="63.5" y2="-20.32" width="0.1524" layer="91"/>
-<label x="66.04" y="-20.32" size="2.54" layer="95"/>
-<wire x1="66.04" y1="-20.32" x2="72.39" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="66.04" y="-20.32"/>
+<wire x1="73.66" y1="-30.48" x2="71.12" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="-30.48" x2="74.93" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="73.66" y="-30.48"/>
+<label x="71.12" y="-30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RTS" class="0">
@@ -9941,6 +9983,7 @@ Add weird UMH3N circuit</text>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="63.5" y1="22.86" x2="71.12" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="22.86" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
+<label x="68.58" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="XO" class="0">
@@ -9954,6 +9997,7 @@ Add weird UMH3N circuit</text>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="22.86" x2="53.34" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="22.86" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
+<label x="53.34" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO0" class="0">
@@ -9964,20 +10008,25 @@ Add weird UMH3N circuit</text>
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="GPIO0"/>
-<wire x1="15.24" y1="-5.08" x2="17.78" y2="-5.08" width="0.1524" layer="91"/>
-<label x="17.78" y="-5.08" size="1.778" layer="95"/>
+<wire x1="10.16" y1="-5.08" x2="12.7" y2="-5.08" width="0.1524" layer="91"/>
+<label x="12.7" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="-15.24" x2="78.74" y2="-15.24" width="0.1524" layer="91"/>
+<label x="71.12" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EN" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="CH_PD"/>
-<wire x1="-17.78" y1="0" x2="-22.86" y2="0" width="0.1524" layer="91"/>
-<label x="-22.86" y="0" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="0" x2="-27.94" y2="0" width="0.1524" layer="91"/>
+<label x="-27.94" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="63.5" y1="-12.7" x2="66.04" y2="-12.7" width="0.1524" layer="91"/>
-<label x="63.5" y="-12.7" size="1.778" layer="95"/>
+<wire x1="71.12" y1="-22.86" x2="76.2" y2="-22.86" width="0.1524" layer="91"/>
+<label x="71.12" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -9991,7 +10040,6 @@ Add weird UMH3N circuit</text>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
-<pinref part="3V1" gate="1" pin="+5V"/>
 <pinref part="U$3" gate="G$1" pin="VCC"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="10.16" y1="45.72" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
@@ -9999,25 +10047,60 @@ Add weird UMH3N circuit</text>
 <wire x1="33.02" y1="48.26" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <junction x="33.02" y="45.72"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="VOUT"/>
-<wire x1="66.04" y1="119.38" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="1"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="71.12" y1="121.92" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="119.38" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
+<junction x="71.12" y="119.38"/>
+</segment>
+</net>
+<net name="GPIO2" class="0">
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="-7.62" x2="78.74" y2="-7.62" width="0.1524" layer="91"/>
+<label x="71.12" y="-7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="3V5" gate="1" pin="+5V"/>
-<wire x1="71.12" y1="121.92" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="MCU" gate="G$1" pin="GPIO2"/>
+<wire x1="10.16" y1="-7.62" x2="12.7" y2="-7.62" width="0.1524" layer="91"/>
+<label x="12.7" y="-7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO15" class="0">
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="-48.26" x2="81.28" y2="-48.26" width="0.1524" layer="91"/>
+<label x="71.12" y="-48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MCU" gate="G$1" pin="GPIO15"/>
+<wire x1="10.16" y1="-10.16" x2="12.7" y2="-10.16" width="0.1524" layer="91"/>
+<label x="12.7" y="-10.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="MCU" gate="G$1" pin="GPIO5"/>
+<wire x1="10.16" y1="0" x2="22.86" y2="0" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="0" x2="22.86" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="MCU" gate="G$1" pin="GPIO4"/>
+<wire x1="10.16" y1="-2.54" x2="22.86" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-2.54" x2="22.86" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="113,1,-48.3023,90.3647,UIN,,,,,"/>
-<approved hash="113,1,-43.2223,71.3147,UOUT,,,,,"/>
-<approved hash="113,1,-46.3973,106.748,EXTPWR,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
