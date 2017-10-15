@@ -8939,16 +8939,6 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-0.0254" y="-0.073" size="0.762" layer="25" font="vector" rot="R270" align="center">&gt;NAME</text>
 <smd name="5" x="1.35" y="0.95" dx="1" dy="0.55" layer="1"/>
 </package>
-<package name="CSM-3X">
-<smd name="P$2" x="2.75" y="0" dx="3.5" dy="1.2" layer="1"/>
-<smd name="P$1" x="-2.75" y="0" dx="3.5" dy="1.2" layer="1"/>
-<text x="-3.81" y="2.27" size="1.27" layer="21">&gt;name</text>
-<text x="-3.81" y="-3.54" size="1.27" layer="21">&gt;value</text>
-<wire x1="-4" y1="2" x2="4" y2="2" width="0.127" layer="21"/>
-<wire x1="4" y1="2" x2="4" y2="-2" width="0.127" layer="21"/>
-<wire x1="4" y1="-2" x2="-4" y2="-2" width="0.127" layer="21"/>
-<wire x1="-4" y1="-2" x2="-4" y2="2" width="0.127" layer="21"/>
-</package>
 <package name="USB-B">
 <pad name="3" x="-1.25" y="0" drill="0.95"/>
 <pad name="4" x="1.25" y="0" drill="0.95" shape="square"/>
@@ -8963,7 +8953,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-6.02" y1="-12.99" x2="6.02" y2="-12.99" width="0.127" layer="21"/>
 </package>
 <package name="MOMENTARY-SWITCH">
-<text x="-2.667" y="2.159" size="1.27" layer="1">&gt;name</text>
+<text x="-2.667" y="2.159" size="1.27" layer="21">&gt;name</text>
 <wire x1="-3" y1="-1.75" x2="-3" y2="1.75" width="0.127" layer="21"/>
 <wire x1="-3" y1="1.75" x2="3" y2="1.75" width="0.127" layer="21"/>
 <wire x1="3" y1="1.75" x2="3" y2="-1.75" width="0.127" layer="21"/>
@@ -9070,21 +9060,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <text x="-2.54" y="10.668" size="1.27" layer="95">&gt;Name</text>
 </symbol>
-<symbol name="SCHOTTKY-1">
-<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.905" y1="1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.905" y1="1.27" x2="1.905" y2="1.016" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="0.635" y1="-1.016" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
-<text x="-2.286" y="1.905" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.286" y="-3.429" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
 <symbol name="MIC550X-XYMT">
 <pin name="EN" x="-10.16" y="0" length="middle"/>
 <pin name="GND" x="2.54" y="-10.16" length="middle" rot="R90"/>
@@ -9095,22 +9070,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="10.16" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="10.16" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
 <text x="-5.08" y="11.43" size="1.27" layer="94">&gt;name</text>
-</symbol>
-<symbol name="Q">
-<wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
-<wire x1="-0.381" y1="1.524" x2="-0.381" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="-0.381" y1="-1.524" x2="0.381" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="0.381" y1="-1.524" x2="0.381" y2="1.524" width="0.254" layer="94"/>
-<wire x1="0.381" y1="1.524" x2="-0.381" y2="1.524" width="0.254" layer="94"/>
-<wire x1="1.016" y1="1.778" x2="1.016" y2="-1.778" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="1.778" x2="-1.016" y2="-1.778" width="0.254" layer="94"/>
-<text x="2.54" y="1.016" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-2.159" y="-1.143" size="0.8636" layer="93">1</text>
-<text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
-<pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
 </symbol>
 <symbol name="MOMENTARY-SWITCH">
 <circle x="-2.54" y="0" radius="0.635" width="0.254" layer="94"/>
@@ -9208,24 +9167,6 @@ Source: AVX .. aphvc.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="BAS40" prefix="D">
-<description>&lt;b&gt;Silicon Schottky Diodes&lt;/b&gt;&lt;p&gt;
-General-purpose diode for high-speed switching</description>
-<gates>
-<gate name="1" symbol="SCHOTTKY-1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT23">
-<connects>
-<connect gate="1" pin="A" pad="1"/>
-<connect gate="1" pin="C" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="MIC5504-3.3YM5">
 <gates>
 <gate name="G$1" symbol="MIC550X-XYMT" x="-2.54" y="-2.54"/>
@@ -9237,22 +9178,6 @@ General-purpose diode for high-speed switching</description>
 <connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="VIN" pad="1"/>
 <connect gate="G$1" pin="VOUT" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="CSM-3X">
-<gates>
-<gate name="G$1" symbol="Q" x="0" y="0"/>
-</gates>
-<devices>
-<device name="CSM-3X" package="CSM-3X">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-<connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -10957,10 +10882,8 @@ or will meet your specific requirements.&lt;p&gt;
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1kΩ"/>
 <part name="U$1" library="USB Switch PCB" deviceset="EC2-5NU" device="EC2-5NU"/>
 <part name="U$2" library="USB Switch PCB" deviceset="EC2-5NU" device="EC2-5NU"/>
-<part name="D1" library="USB Switch PCB" deviceset="BAS40" device="" value="BAS21LT1"/>
 <part name="Q1" library="USB Switch PCB" deviceset="2N7002P" device="2N7002P" value="2N7002P"/>
 <part name="Q2" library="USB Switch PCB" deviceset="2N7002P" device="2N7002P" value="2N7002P"/>
-<part name="D2" library="USB Switch PCB" deviceset="BAS40" device="" value="BAS21LT1"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -10984,11 +10907,6 @@ or will meet your specific requirements.&lt;p&gt;
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="Q3" library="USB Switch PCB" deviceset="CSM-3X" device="CSM-3X" value="12 MHz"/>
-<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="20pF"/>
-<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="20pF"/>
-<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device="" value="+3.3V"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="12kΩ"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
@@ -11033,9 +10951,9 @@ Add external GPIO pin access?</text>
 <wire x1="-91.44" y1="69.85" x2="-91.44" y2="132.08" width="0.1524" layer="97"/>
 <text x="-90.17" y="133.35" size="2.54" layer="97">Connectors</text>
 <wire x1="-48.26" y1="132.08" x2="17.78" y2="132.08" width="0.1524" layer="97"/>
-<wire x1="17.78" y1="132.08" x2="17.78" y2="68.58" width="0.1524" layer="97"/>
-<wire x1="17.78" y1="68.58" x2="-48.26" y2="68.58" width="0.1524" layer="97"/>
-<wire x1="-48.26" y1="68.58" x2="-48.26" y2="132.08" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="132.08" x2="17.78" y2="76.2" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="76.2" x2="-48.26" y2="76.2" width="0.1524" layer="97"/>
+<wire x1="-48.26" y1="76.2" x2="-48.26" y2="132.08" width="0.1524" layer="97"/>
 <text x="-46.99" y="133.35" size="2.54" layer="97">Relays &amp; Drivers</text>
 <wire x1="27.94" y1="132.08" x2="81.28" y2="132.08" width="0.1524" layer="97"/>
 <wire x1="81.28" y1="132.08" x2="81.28" y2="68.58" width="0.1524" layer="97"/>
@@ -11043,9 +10961,9 @@ Add external GPIO pin access?</text>
 <wire x1="27.94" y1="68.58" x2="27.94" y2="132.08" width="0.1524" layer="97"/>
 <text x="29.21" y="133.35" size="2.54" layer="97">Power Management</text>
 <wire x1="-48.26" y1="55.88" x2="83.82" y2="55.88" width="0.1524" layer="97"/>
-<wire x1="83.82" y1="55.88" x2="83.82" y2="-48.26" width="0.1524" layer="97"/>
-<wire x1="83.82" y1="-48.26" x2="-48.26" y2="-48.26" width="0.1524" layer="97"/>
-<wire x1="-48.26" y1="-48.26" x2="-48.26" y2="55.88" width="0.1524" layer="97"/>
+<wire x1="83.82" y1="55.88" x2="83.82" y2="-15.24" width="0.1524" layer="97"/>
+<wire x1="83.82" y1="-15.24" x2="-48.26" y2="-15.24" width="0.1524" layer="97"/>
+<wire x1="-48.26" y1="-15.24" x2="-48.26" y2="55.88" width="0.1524" layer="97"/>
 <text x="-46.99" y="57.15" size="2.54" layer="97">ESP12E</text>
 <wire x1="-96.52" y1="55.88" x2="-58.42" y2="55.88" width="0.1524" layer="97"/>
 <wire x1="-58.42" y1="55.88" x2="-58.42" y2="-17.78" width="0.1524" layer="97"/>
@@ -11060,10 +10978,8 @@ Add external GPIO pin access?</text>
 <instance part="R2" gate="G$1" x="-68.58" y="35.56" rot="R270"/>
 <instance part="U$1" gate="G$1" x="-35.56" y="83.82"/>
 <instance part="U$2" gate="G$1" x="-35.56" y="111.76"/>
-<instance part="D1" gate="1" x="-33.02" y="76.2" rot="R180"/>
 <instance part="Q1" gate="FET" x="10.16" y="88.9"/>
 <instance part="Q2" gate="FET" x="10.16" y="116.84"/>
-<instance part="D2" gate="1" x="-33.02" y="104.14" rot="R180"/>
 <instance part="GND3" gate="1" x="12.7" y="81.28"/>
 <instance part="GND4" gate="1" x="12.7" y="109.22"/>
 <instance part="P+2" gate="1" x="-68.58" y="50.8"/>
@@ -11080,22 +10996,17 @@ Add external GPIO pin access?</text>
 <instance part="EXTPWR" gate="G$1" x="-82.55" y="119.38"/>
 <instance part="GND7" gate="1" x="-71.882" y="124.46" rot="R180"/>
 <instance part="P+7" gate="1" x="-71.882" y="116.84" rot="R180"/>
-<instance part="MCU" gate="G$1" x="-2.54" y="0"/>
-<instance part="3V3" gate="1" x="-38.1" y="-7.62"/>
-<instance part="C1" gate="G$1" x="-30.48" y="-12.7"/>
-<instance part="C2" gate="G$1" x="-38.1" y="-12.7"/>
-<instance part="GND9" gate="1" x="-38.1" y="-20.32"/>
-<instance part="GND10" gate="1" x="-30.48" y="-20.32"/>
-<instance part="GND11" gate="1" x="7.62" y="-12.7"/>
-<instance part="Q3" gate="G$1" x="60.96" y="45.72"/>
-<instance part="C5" gate="G$1" x="53.34" y="40.64"/>
-<instance part="C6" gate="G$1" x="71.12" y="40.64"/>
-<instance part="GND2" gate="1" x="53.34" y="33.02"/>
-<instance part="GND15" gate="1" x="71.12" y="33.02"/>
-<instance part="3V4" gate="1" x="55.88" y="15.24"/>
-<instance part="R3" gate="G$1" x="60.96" y="-15.24"/>
-<instance part="C7" gate="G$1" x="68.58" y="-17.78"/>
-<instance part="GND16" gate="1" x="68.58" y="-25.4"/>
+<instance part="MCU" gate="G$1" x="-2.54" y="33.02"/>
+<instance part="3V3" gate="1" x="-38.1" y="25.4"/>
+<instance part="C1" gate="G$1" x="-30.48" y="20.32"/>
+<instance part="C2" gate="G$1" x="-38.1" y="20.32"/>
+<instance part="GND9" gate="1" x="-38.1" y="12.7"/>
+<instance part="GND10" gate="1" x="-30.48" y="12.7"/>
+<instance part="GND11" gate="1" x="7.62" y="20.32"/>
+<instance part="3V4" gate="1" x="53.34" y="48.26"/>
+<instance part="R3" gate="G$1" x="58.42" y="17.78"/>
+<instance part="C7" gate="G$1" x="66.04" y="15.24"/>
+<instance part="GND16" gate="1" x="66.04" y="7.62"/>
 <instance part="U$5" gate="G$1" x="50.8" y="111.76"/>
 <instance part="C8" gate="G$1" x="71.12" y="116.84"/>
 <instance part="GND17" gate="1" x="53.34" y="99.06"/>
@@ -11103,17 +11014,17 @@ Add external GPIO pin access?</text>
 <instance part="C9" gate="G$1" x="35.56" y="109.22"/>
 <instance part="GND19" gate="1" x="35.56" y="101.6"/>
 <instance part="P+8" gate="1" x="35.56" y="121.92"/>
-<instance part="R4" gate="G$1" x="60.96" y="-7.62"/>
-<instance part="R7" gate="G$1" x="60.96" y="0"/>
-<instance part="R8" gate="G$1" x="60.96" y="7.62"/>
-<instance part="R9" gate="G$1" x="60.96" y="-33.02"/>
-<instance part="GND20" gate="1" x="55.88" y="-40.64"/>
+<instance part="R4" gate="G$1" x="58.42" y="25.4"/>
+<instance part="R7" gate="G$1" x="58.42" y="33.02"/>
+<instance part="R8" gate="G$1" x="58.42" y="40.64"/>
+<instance part="R9" gate="G$1" x="58.42" y="0"/>
+<instance part="GND20" gate="1" x="53.34" y="-7.62"/>
 <instance part="+3V2" gate="G$1" x="71.12" y="124.46"/>
-<instance part="R10" gate="G$1" x="25.4" y="5.08"/>
-<instance part="R11" gate="G$1" x="25.4" y="-2.54"/>
+<instance part="R10" gate="G$1" x="25.4" y="38.1"/>
+<instance part="R11" gate="G$1" x="25.4" y="30.48"/>
 <instance part="U$6" gate="G$1" x="-78.74" y="99.06"/>
-<instance part="J1" gate="G$1" x="-22.86" y="35.56"/>
-<instance part="GND8" gate="1" x="-5.08" y="40.64"/>
+<instance part="J1" gate="G$1" x="25.4" y="0"/>
+<instance part="GND8" gate="1" x="43.18" y="5.08"/>
 <instance part="RESET" gate="G$1" x="-74.676" y="-1.016"/>
 <instance part="FLASH" gate="G$1" x="-74.676" y="-8.636"/>
 <instance part="GND12" gate="1" x="-67.056" y="-3.556"/>
@@ -11173,14 +11084,6 @@ Add external GPIO pin access?</text>
 <pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C6" gate="G$1" pin="2"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="C7" gate="G$1" pin="2"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
@@ -11199,12 +11102,12 @@ Add external GPIO pin access?</text>
 <segment>
 <pinref part="GND20" gate="1" pin="GND"/>
 <pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="55.88" y1="-38.1" x2="55.88" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-5.08" x2="53.34" y2="0" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="GND"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="-17.78" y1="43.18" x2="-5.08" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="7.62" x2="43.18" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RESET" gate="G$1" pin="P$2"/>
@@ -11227,10 +11130,6 @@ Add external GPIO pin access?</text>
 <segment>
 <pinref part="U$2" gate="G$1" pin="P"/>
 <pinref part="P+6" gate="1" pin="+5V"/>
-<pinref part="D2" gate="1" pin="C"/>
-<wire x1="-35.56" y1="104.14" x2="-40.64" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="104.14" x2="-40.64" y2="111.76" width="0.1524" layer="91"/>
-<junction x="-40.64" y="111.76"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
@@ -11243,10 +11142,6 @@ Add external GPIO pin access?</text>
 <segment>
 <pinref part="U$1" gate="G$1" pin="P"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
-<pinref part="D1" gate="1" pin="C"/>
-<wire x1="-35.56" y1="76.2" x2="-40.64" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="76.2" x2="-40.64" y2="83.82" width="0.1524" layer="91"/>
-<junction x="-40.64" y="83.82"/>
 </segment>
 <segment>
 <pinref part="S1" gate="G$1" pin="S"/>
@@ -11261,26 +11156,26 @@ Add external GPIO pin access?</text>
 <segment>
 <pinref part="MCU" gate="G$1" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="-10.16" x2="-30.48" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="22.86" x2="-30.48" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-30.48" y1="-10.16" x2="-38.1" y2="-10.16" width="0.1524" layer="91"/>
-<junction x="-30.48" y="-10.16"/>
+<wire x1="-30.48" y1="22.86" x2="-38.1" y2="22.86" width="0.1524" layer="91"/>
+<junction x="-30.48" y="22.86"/>
 <pinref part="3V3" gate="1" pin="+5V"/>
-<junction x="-38.1" y="-10.16"/>
+<junction x="-38.1" y="22.86"/>
 </segment>
 <segment>
 <pinref part="3V4" gate="1" pin="+5V"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="55.88" y1="12.7" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="45.72" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="55.88" y1="7.62" x2="55.88" y2="0" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="0" x2="55.88" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="-7.62" x2="55.88" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="55.88" y="-7.62"/>
+<wire x1="53.34" y1="40.64" x2="53.34" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="33.02" x2="53.34" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="25.4" x2="53.34" y2="17.78" width="0.1524" layer="91"/>
+<junction x="53.34" y="25.4"/>
 <pinref part="R7" gate="G$1" pin="1"/>
-<junction x="55.88" y="0"/>
+<junction x="53.34" y="33.02"/>
 <pinref part="R8" gate="G$1" pin="1"/>
-<junction x="55.88" y="7.62"/>
+<junction x="53.34" y="40.64"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="VIN"/>
@@ -11295,8 +11190,8 @@ Add external GPIO pin access?</text>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="VCC"/>
-<wire x1="-17.78" y1="38.1" x2="-10.16" y2="38.1" width="0.1524" layer="91"/>
-<label x="-15.24" y="38.1" size="1.778" layer="95"/>
+<wire x1="30.48" y1="2.54" x2="38.1" y2="2.54" width="0.1524" layer="91"/>
+<label x="33.02" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="VCC"/>
@@ -11313,12 +11208,8 @@ Add external GPIO pin access?</text>
 <net name="POWERCOIL" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="N"/>
-<wire x1="-25.4" y1="83.82" x2="-25.4" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="D1" gate="1" pin="A"/>
-<wire x1="-30.48" y1="76.2" x2="-25.4" y2="76.2" width="0.1524" layer="91"/>
 <label x="-25.4" y="83.82" size="1.778" layer="95"/>
 <wire x1="-25.4" y1="83.82" x2="-12.7" y2="83.82" width="0.1524" layer="91"/>
-<junction x="-25.4" y="83.82"/>
 </segment>
 <segment>
 <pinref part="Q1" gate="FET" pin="D"/>
@@ -11334,8 +11225,8 @@ Add external GPIO pin access?</text>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
-<label x="30.48" y="-2.54" size="1.778" layer="95"/>
-<wire x1="30.48" y1="-2.54" x2="45.72" y2="-2.54" width="0.1524" layer="91"/>
+<label x="30.48" y="30.48" size="1.778" layer="95"/>
+<wire x1="30.48" y1="30.48" x2="45.72" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCCO" class="0">
@@ -11433,12 +11324,8 @@ Add external GPIO pin access?</text>
 <net name="DATACOIL" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="N"/>
-<wire x1="-25.4" y1="104.14" x2="-25.4" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="D2" gate="1" pin="A"/>
-<wire x1="-30.48" y1="104.14" x2="-25.4" y2="104.14" width="0.1524" layer="91"/>
 <label x="-25.4" y="111.76" size="1.778" layer="95"/>
 <wire x1="-25.4" y1="111.76" x2="-12.7" y2="111.76" width="0.1524" layer="91"/>
-<junction x="-25.4" y="111.76"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="FET" pin="D"/>
@@ -11455,25 +11342,25 @@ Add external GPIO pin access?</text>
 <net name="TXD" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="TXD"/>
-<wire x1="7.62" y1="7.62" x2="15.24" y2="7.62" width="0.1524" layer="91"/>
-<label x="10.16" y="7.62" size="1.778" layer="95"/>
+<wire x1="7.62" y1="40.64" x2="15.24" y2="40.64" width="0.1524" layer="91"/>
+<label x="10.16" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="RXI"/>
-<wire x1="-17.78" y1="33.02" x2="-10.16" y2="33.02" width="0.1524" layer="91"/>
-<label x="-15.24" y="33.02" size="1.778" layer="95"/>
+<wire x1="30.48" y1="-2.54" x2="38.1" y2="-2.54" width="0.1524" layer="91"/>
+<label x="33.02" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RXD" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="RXD"/>
-<wire x1="7.62" y1="5.08" x2="15.24" y2="5.08" width="0.1524" layer="91"/>
-<label x="10.16" y="5.08" size="1.778" layer="95"/>
+<wire x1="7.62" y1="38.1" x2="15.24" y2="38.1" width="0.1524" layer="91"/>
+<label x="10.16" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="TXO"/>
-<wire x1="-17.78" y1="35.56" x2="-10.16" y2="35.56" width="0.1524" layer="91"/>
-<label x="-15.24" y="35.56" size="1.778" layer="95"/>
+<wire x1="30.48" y1="0" x2="38.1" y2="0" width="0.1524" layer="91"/>
+<label x="33.02" y="0" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="POWERGATE" class="0">
@@ -11484,23 +11371,23 @@ Add external GPIO pin access?</text>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
-<label x="30.48" y="5.08" size="1.778" layer="95"/>
-<wire x1="30.48" y1="5.08" x2="45.72" y2="5.08" width="0.1524" layer="91"/>
+<label x="30.48" y="38.1" size="1.778" layer="95"/>
+<wire x1="30.48" y1="38.1" x2="45.72" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RST" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="REST"/>
-<wire x1="-25.4" y1="7.62" x2="-30.48" y2="7.62" width="0.1524" layer="91"/>
-<label x="-30.48" y="7.62" size="1.778" layer="95"/>
+<wire x1="-25.4" y1="40.64" x2="-30.48" y2="40.64" width="0.1524" layer="91"/>
+<label x="-30.48" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="68.58" y1="-15.24" x2="66.04" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="-15.24" x2="69.85" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="68.58" y="-15.24"/>
-<label x="66.04" y="-15.24" size="1.778" layer="95"/>
+<wire x1="66.04" y1="17.78" x2="63.5" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="17.78" x2="67.31" y2="17.78" width="0.1524" layer="91"/>
+<junction x="66.04" y="17.78"/>
+<label x="63.5" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="RESET" gate="G$1" pin="P$1"/>
@@ -11508,34 +11395,16 @@ Add external GPIO pin access?</text>
 <label x="-89.916" y="-1.016" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="XI" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="2"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="63.5" y1="45.72" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="45.72" x2="71.12" y2="43.18" width="0.1524" layer="91"/>
-<label x="68.58" y="45.72" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="XO" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="1"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="45.72" x2="53.34" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="45.72" x2="53.34" y2="43.18" width="0.1524" layer="91"/>
-<label x="53.34" y="45.72" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="GPIO0" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="GPIO0"/>
-<wire x1="7.62" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
-<label x="10.16" y="-2.54" size="1.778" layer="95"/>
+<wire x1="7.62" y1="30.48" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
+<label x="10.16" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="0" x2="73.66" y2="0" width="0.1524" layer="91"/>
-<label x="66.04" y="0" size="1.778" layer="95"/>
+<wire x1="63.5" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
+<label x="63.5" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="FLASH" gate="G$1" pin="P$1"/>
@@ -11546,13 +11415,13 @@ Add external GPIO pin access?</text>
 <net name="EN" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="CH_PD"/>
-<wire x1="-25.4" y1="2.54" x2="-30.48" y2="2.54" width="0.1524" layer="91"/>
-<label x="-30.48" y="2.54" size="1.778" layer="95"/>
+<wire x1="-25.4" y1="35.56" x2="-30.48" y2="35.56" width="0.1524" layer="91"/>
+<label x="-30.48" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="-7.62" x2="71.12" y2="-7.62" width="0.1524" layer="91"/>
-<label x="66.04" y="-7.62" size="1.778" layer="95"/>
+<wire x1="63.5" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
+<label x="63.5" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -11568,48 +11437,48 @@ Add external GPIO pin access?</text>
 <net name="GPIO2" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="7.62" x2="73.66" y2="7.62" width="0.1524" layer="91"/>
-<label x="66.04" y="7.62" size="1.778" layer="95"/>
+<wire x1="63.5" y1="40.64" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
+<label x="63.5" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="GPIO2"/>
-<wire x1="7.62" y1="-5.08" x2="17.78" y2="-5.08" width="0.1524" layer="91"/>
-<label x="10.16" y="-5.08" size="1.778" layer="95"/>
+<wire x1="7.62" y1="27.94" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
+<label x="10.16" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO15" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="-33.02" x2="76.2" y2="-33.02" width="0.1524" layer="91"/>
-<label x="66.04" y="-33.02" size="1.778" layer="95"/>
+<wire x1="63.5" y1="0" x2="73.66" y2="0" width="0.1524" layer="91"/>
+<label x="63.5" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="GPIO15"/>
-<wire x1="7.62" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
-<label x="10.16" y="-7.62" size="1.778" layer="95"/>
+<wire x1="7.62" y1="25.4" x2="17.78" y2="25.4" width="0.1524" layer="91"/>
+<label x="10.16" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="GPIO5"/>
-<wire x1="7.62" y1="2.54" x2="20.32" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="2.54" x2="20.32" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="35.56" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="35.56" x2="20.32" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="GPIO4"/>
-<wire x1="7.62" y1="0" x2="20.32" y2="0" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="0" x2="20.32" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="33.02" x2="20.32" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="33.02" x2="20.32" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="ADC" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="ADC"/>
-<wire x1="-25.4" y1="5.08" x2="-30.48" y2="5.08" width="0.1524" layer="91"/>
-<label x="-30.48" y="5.08" size="1.778" layer="95"/>
+<wire x1="-25.4" y1="38.1" x2="-30.48" y2="38.1" width="0.1524" layer="91"/>
+<label x="-30.48" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="OUT"/>
@@ -11637,6 +11506,11 @@ Add external GPIO pin access?</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="113,1,-78.1473,121.988,EXTPWR,,,,,"/>
+<approved hash="113,1,-8.89,25.8445,MCU,,,,,"/>
+<approved hash="113,1,25.9927,2.60773,J1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
