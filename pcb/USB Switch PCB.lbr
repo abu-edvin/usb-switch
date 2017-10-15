@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -478,6 +478,14 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/tps709.pdf"&gt;http://www.t
 <rectangle x1="-1.15" y1="0.8" x2="-0.75" y2="1.4" layer="51"/>
 <rectangle x1="0.75" y1="0.8" x2="1.15" y2="1.4" layer="51"/>
 </package>
+<package name="TERMINAL-BLOCK">
+<pad name="N" x="2.54" y="0" drill="0.6" shape="square"/>
+<pad name="P" x="-2.54" y="0" drill="0.6"/>
+<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.127" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-1.27" x2="-3.81" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-1.27" x2="-3.81" y2="1.27" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="NONLATCH">
@@ -779,6 +787,17 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/tps709.pdf"&gt;http://www.t
 <pin name="VP" x="-10.16" y="-5.08" visible="pin" length="middle"/>
 <pin name="GND" x="10.16" y="-7.62" visible="pin" length="middle" rot="R180"/>
 </symbol>
+<symbol name="TERMINAL-BLOCK">
+<pin name="P" x="5.08" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="N" x="5.08" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<text x="-2.54" y="3.048" size="1.27" layer="94">&gt;name</text>
+<circle x="0" y="0" radius="0.508" width="0.254" layer="94"/>
+<circle x="0" y="-2.54" radius="0.508" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="EC2-5NU" prefix="U">
@@ -1078,6 +1097,22 @@ General-purpose diode for high-speed switching</description>
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TERMINAL-BLOCK">
+<gates>
+<gate name="G$1" symbol="TERMINAL-BLOCK" x="-2.54" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="TERMINAL-BLOCK">
+<connects>
+<connect gate="G$1" pin="N" pad="N"/>
+<connect gate="G$1" pin="P" pad="P"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
